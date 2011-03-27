@@ -10,3 +10,5 @@ To run restas-odesk do:
 > (restas:start '#:test :port 8000)
 
 Don't forget to put real public-key and secret-key instead of "PK" and "SK".
+You have to add keys at odesk api center: http://www.odesk.com/services/api/keys
+By default `callback_url` is set to "auth/callback/".

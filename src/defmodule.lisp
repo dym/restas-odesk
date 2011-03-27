@@ -13,3 +13,7 @@
 (defparameter *odesk-api-public-key* nil)
 
 (defparameter *odesk-api-secret-key* nil)
+
+(defparameter *odesk-authenticate-url* "auth/authenticate/")
+
+(defparameter *odesk-callback-url* "auth/callback/")

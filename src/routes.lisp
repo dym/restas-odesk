@@ -2,14 +2,14 @@
 
 (in-package :restas.odesk)
 
-(restas:define-route odesk-authenticate-page ("auth/authenticate/")
+(restas:define-route odesk-authenticate-page (*odesk-authenticate-url*)
   (odesk:with-odesk connection
       (:format :json
                :public-key *odesk-api-public-key*
                :secret-key *odesk-api-secret-key*)
     (restas:redirect (odesk:auth-url connection))))
 
-(restas:define-route odesk-callback-page ("auth/callback/")
+(restas:define-route odesk-callback-page (*odesk-callback-url*)
   (odesk:with-odesk connection
       (:format :json
                :public-key *odesk-api-public-key*
