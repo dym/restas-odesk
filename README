@@ -1,0 +1,12 @@
+To run restas-odesk do:
+
+> (load "restas-odesk.asd")
+> (require :restas-odesk)
+> (restas:define-module #:test (:use #:cl))
+> (in-package #:test)
+> (restas:mount-submodule test-restas-odesk (#:restas.odesk)
+     (restas.odesk:*odesk-api-public-key* "PK")
+     (restas.odesk:*odesk-api-secret-key* "SK"))
+> (restas:start '#:test :port 8000)
+
+Don't forget to put real public-key and secret-key instead of "PK" and "SK".
