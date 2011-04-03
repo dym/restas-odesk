@@ -7,7 +7,8 @@
            #:*odesk-authenticate-url*
            #:*odesk-callback-url*
            #:*odesk-token-session-key*
-           #:*odesk-redirect-session-key*))
+           #:*odesk-redirect-session-key*
+           #:*odesk-redirect-field-name*))
 
 (in-package :restas.odesk)
 
@@ -22,3 +23,5 @@
 (defparameter *odesk-token-session-key* "_odesk_api_token")
 
 (defparameter *odesk-redirect-session-key* "_odesk_redirect_url")
+
+(defparameter *odesk-redirect-field-name* "next")
