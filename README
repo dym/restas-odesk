@@ -11,4 +11,9 @@ To run restas-odesk do:
 
 Don't forget to put real public-key and secret-key instead of "PK" and "SK".
 You have to add keys at odesk api center: http://www.odesk.com/services/api/keys
-By default `callback_url` is set to "auth/callback/".
+(by default `callback_url` is set to "auth/callback/").
+
+Check "src/defmodule.lisp" file for other configurable parameters.
+
+Compatibility list:
+restas-odesk 0.1.x - cl-odesk 0.1.x
