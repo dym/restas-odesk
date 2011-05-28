@@ -1,3 +1,7 @@
+WARNING:
+restas-odesk works only with the latest version (check master branch) of restas which
+only works with the latest hunchentoot.
+
 To run restas-odesk do:
 
 > (load "restas-odesk.asd")
@@ -17,3 +21,4 @@ Check "src/defmodule.lisp" file for other configurable parameters.
 
 Compatibility list:
 restas-odesk 0.1.x - cl-odesk 0.1.x
+restas-odesk 0.2.x - cl-odesk 1.0.x
