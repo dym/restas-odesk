@@ -21,4 +21,5 @@ Check "src/defmodule.lisp" file for other configurable parameters.
 
 Compatibility list:
 restas-odesk 0.1.x - cl-odesk 0.1.x
-restas-odesk 0.2.x - cl-odesk 1.0.x
+restas-odesk 0.2.x - cl-odesk 0.2.x
+                              1.0.x
