@@ -8,7 +8,8 @@
            #:*odesk-callback-url*
            #:*odesk-token-session-key*
            #:*odesk-redirect-session-key*
-           #:*odesk-redirect-field-name*))
+           #:*odesk-redirect-field-name*
+           #:*token-callback*))
 
 (in-package :restas.odesk)
 
@@ -25,3 +26,8 @@
 (defparameter *odesk-redirect-session-key* "_odesk_redirect_url")
 
 (defparameter *odesk-redirect-field-name* "next")
+
+(defparameter *token-callback* 'default-token-callback)
+
+(defun default-token-callback (token)
+  (hunchentoot:set-cookie *odesk-token-session-key* :value token))
