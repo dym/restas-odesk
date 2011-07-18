@@ -8,7 +8,7 @@
 
 (defsystem restas-odesk
   :name "oDesk API Plugin for RESTAS"
-  :version "0.2.0"
+  :version "0.3.0"
   :author "Dmitriy Budashny <dmitriy.budashny@gmail.com>"
   :license "BSD"
   :components
