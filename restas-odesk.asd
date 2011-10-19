@@ -6,7 +6,7 @@
 
 (in-package :restas-odesk-asd)
 
-(defsystem restas-odesk
+(defsystem #:restas-odesk
   :name "oDesk API Plugin for RESTAS"
   :version "0.3.0"
   :author "Dmitriy Budashny <dmitriy.budashny@gmail.com>"
