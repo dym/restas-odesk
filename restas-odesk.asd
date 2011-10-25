@@ -15,5 +15,6 @@
   ((:module "src"
             :components
             ((:file "defmodule")
-             (:file "routes" :depends-on ("defmodule")))))
+             (:file "utils" :depends-on ("defmodule"))
+             (:file "routes" :depends-on ("utils")))))
   :depends-on (#:restas #:odesk #:cl-json))

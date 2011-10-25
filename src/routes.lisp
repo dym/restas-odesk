@@ -21,12 +21,12 @@
        :secret-key *odesk-api-secret-key*)
     (let* ((frob (string-downcase (hunchentoot:get-parameter "frob")))
            (json-text (first (odesk:auth/get-token :parameters (list (cons "frob" frob)))))
-           (token (json:with-decoder-simple-clos-semantics
-                    (let ((json:*json-symbols-package* nil))
-                      (let ((x (json:decode-json-from-string
-                                json-text)))
-                        (with-slots (token) x
-                          token)))))
+           (token (json:with-decoder-simple-list-semantics
+                           (with-input-from-string
+                               (s json-text)
+                             (simple-json-bind (token) s
+                                  (format t "token: ~A%" token)
+                                  token))))
            (redirect-url (hunchentoot:cookie-in *odesk-redirect-session-key*)))
       (funcall *token-callback* token)
       (restas:redirect redirect-url))))
